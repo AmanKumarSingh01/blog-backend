@@ -31,9 +31,6 @@ mongoose
 app.use('/api/upload', upload);
 app.use('/api/download', download);
 
-app.get('/', (req, res) => {
-    res.send("Its working")
-})
 
 
 app.listen(port, ()=>{console.log(`The server is running on port ${port}`)})
