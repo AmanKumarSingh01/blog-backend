@@ -6,11 +6,14 @@ const port = process.env.PORT || 4000;
 const db = require('./constant/keys.js').mongouri;
 const upload = require('./Api/upload.js');
 const download = require('./Api/download.js');
+var cors = require('cors');
 app.use(
     bodyParser.urlencoded({
         extended: true
     })
 )
+
+app.use(cors());
 
 app.use(bodyParser.json())
 
